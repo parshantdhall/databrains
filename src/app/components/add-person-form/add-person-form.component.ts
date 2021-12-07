@@ -46,9 +46,11 @@ export class AddPersonFormComponent implements OnInit {
   savePerson() {
     if (this.personForm.valid) {
       const date = this.personForm.value.dob.toString();
+      const dateArr = date.split(' ');
+      const dt = `${dateArr[2]} ${dateArr[1]} ${dateArr[3]}`;
       const newPerson = {
         ...this.personForm.value,
-        dob: date,
+        dob: dt,
       };
       this.onAddPerson.emit(newPerson);
       this.personForm.reset();

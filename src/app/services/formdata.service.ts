@@ -7,14 +7,14 @@ let data: PersonType[] = [
     firstName: 'Parshant',
     lastName: 'Dhall',
     email: 'aa@aa1.com',
-    dob: 'Tue Dec 07 2021 18:28:19 GMT+1100 (Australian Eastern Daylight Time)',
+    dob: '07 Dec 2021',
     phone: '12345678',
   },
   {
     firstName: 'John',
     lastName: 'Doe',
     email: 'aa@aa2.com',
-    dob: 'Tue Dec 07 2021 18:28:19 GMT+1100 (Australian Eastern Daylight Time)',
+    dob: '07 Dec 2021',
     phone: '12345678',
   },
 
@@ -22,7 +22,7 @@ let data: PersonType[] = [
     firstName: 'Santa',
     lastName: 'Claus',
     email: 'aa@aa3.com',
-    dob: 'Tue Dec 07 2021 18:28:19 GMT+1100 (Australian Eastern Daylight Time)',
+    dob: '07 Dec 2021',
     phone: '12345678',
   },
 
@@ -30,7 +30,7 @@ let data: PersonType[] = [
     firstName: 'Dummy',
     lastName: 'Person',
     email: 'aa@aa4.com',
-    dob: 'Tue Dec 07 2021 18:28:19 GMT+1100 (Australian Eastern Daylight Time)',
+    dob: '07 Dec 2021',
     phone: '12345678',
   },
 ];
