@@ -1,0 +1,5 @@
+<app-add-person-form (onAddPerson)="addPerson($event)"></app-add-person-form>
+<app-person-table
+  [dataSource]="personData"
+  (onEditPerson)="editPerson($event)"
+></app-person-table>

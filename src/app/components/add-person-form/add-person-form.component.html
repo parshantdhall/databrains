@@ -1,0 +1,122 @@
+<form [formGroup]="personForm" class="form-container" *ngIf="showAddPersonForm">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Person Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              formControlName="firstName"
+              placeholder="First name"
+            />
+            <mat-hint
+              style="color: red"
+              *ngIf="
+                personForm.get('firstName').touched &&
+                personForm.get('firstName').errors &&
+                personForm.get('firstName').errors['required']
+              "
+            >
+              First Name is required
+            </mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input
+              matInput
+              formControlName="lastName"
+              placeholder="Last name"
+            />
+            <mat-hint
+              style="color: red"
+              *ngIf="
+                personForm.get('lastName').touched &&
+                personForm.get('lastName').errors &&
+                personForm.get('lastName').errors['required']
+              "
+            >
+              Last Name is required
+            </mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <mat-form-field class="full-width">
+            <input matInput formControlName="email" placeholder="Email" />
+            <mat-hint
+              style="color: red"
+              *ngIf="
+                personForm.get('email').touched &&
+                personForm.get('email').errors &&
+                personForm.get('email').errors['required']
+              "
+            >
+              Email is required
+            </mat-hint>
+            <!-- <mat-hint
+              style="color: red"
+              *ngIf="
+                personForm.get('email').touched &&
+                personForm.get('email').errors &&
+                personForm.get('email').errors['pattern']
+              "
+            >
+              Please enter a valid email address
+            </mat-hint> -->
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 top-padding">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Select DOB</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob" />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-hint
+              style="color: red"
+              *ngIf="
+                personForm.get('dob').touched &&
+                personForm.get('dob').errors &&
+                personForm.get('dob').errors['required']
+              "
+            >
+              Date Of Birth is required
+            </mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field class="full-width">
+          <input
+            type="tel"
+            matInput
+            formControlName="phone"
+            placeholder="Phone Number"
+          />
+          <mat-hint
+            style="color: red"
+            *ngIf="
+              personForm.get('phone').touched &&
+              personForm.get('phone').errors &&
+              personForm.get('phone').errors['required']
+            "
+          >
+            Phone is required
+          </mat-hint>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button="" (click)="savePerson()" color="primary">
+        Save
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <a routerLink="/" style="color: white; text-decoration: none">
+    <span>Data Brian</span>
+  </a>
+  <span class="spacer"></span>
+
+  <button mat-icon-button aria-label="Add a new person" (click)="onClick()">
+    <mat-icon>{{ showAddPersonForm ? "cancel" : "add_circle" }}</mat-icon>
+  </button>
+</mat-toolbar>
